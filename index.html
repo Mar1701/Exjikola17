@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <title>Form Manajemen Supir - Travel</title>
+</head>
+<body>
+  <h1>Form Manajemen Supir</h1>
+
+  <form action="#" method="post" enctype="multipart/form-data">
+    <table cellpadding="6" cellspacing="0" border="0">
+      <tr>
+        <td><label for="nama">Nama Lengkap:</label></td>
+        <td><input id="nama" name="nama" type="text" required maxlength="100" /></td>
+      </tr>
+
+      <tr>
+        <td><label for="email">Email:</label></td>
+        <td><input id="email" name="email" type="email" required placeholder="" /></td>
+      </tr>
+
+      <tr>
+        <td><label for="hp">No. Telepon (HP):</label></td>
+        <td>
+          <!-- pattern: hanya angka, antara 10-15 digit -->
+          <input id="hp" name="hp" type="tel" inputmode="numeric"
+                 pattern="^\d{10,15}$" required
+                 title="Masukkan hanya angka, 10–15 digit (contoh: 081234567890)" />
+        </td>
+      </tr>
+
+      <tr>
+        <td><label for="destinasi">Destinasi:</label></td>
+        <td>
+          <select id="destinasi" name="destinasi" required>
+            <option value="">-- Pilih Destinasi --</option>
+            <option>Medan</option>
+            <option>Pematang Siantar</option>
+            <option>Prapat</option>
+            <option>Padang</option>
+            <option>Bukittinggi</option>
+            <option>Pekanbaru</option>
+            <option>Banda Aceh</option>
+            <option>Jakarta</option>
+            <option>Semarang</option>
+            <option>Yogyakarta</option>
+            <option>Surabaya</option>
+            <option>Malang</option>
+            <option>Denpasar</option>
+            <option>Kupang</option>
+            <option>Makassar</option>
+            <option>Jayapura</option>
+            <option>Timika</option>
+          </select>
+        </td>
+      </tr>
+
+      <tr>
+        <td><label for="tanggal">Tanggal Berangkat:</label></td>
+        <td><input id="tanggal" name="tanggal" type="date" required /></td>
+      </tr>
+
+      <tr>
+        <td><label for="waktu">Waktu Berangkat:</label></td>
+        <td><input id="waktu" name="waktu" type="time" required /></td>
+      </tr>
+
+      <tr>
+        <td><label for="penumpang">Jumlah Penumpang:</label></td>
+        <td><input id="penumpang" name="penumpang" type="number" min="1" max="100" value="1" required /></td>
+      </tr>
+
+      <tr>
+        <td><label for="armada">Pilihan Armada:</label></td>
+        <td>
+          <select id="armada" name="armada" required>
+            <option value="">-- Pilih Armada --</option>
+            <option>Mobil Hiace</option>
+            <option>Bus Laksana</option>
+            <option>Kijang Innova</option>
+            <option>Mercedes-Benz 10000 OH</option>
+          </select>
+        </td>
+      </tr>
+
+      <tr>
+        <td valign="top">Validasi Kesiapan Supir:</td>
+        <td>
+          <label><input type="checkbox" name="kesiapan[]" value="ngantuk" /> Supir sedang dalam kondisi ngantuk berat</label><br />
+          <label><input type="checkbox" name="kesiapan[]" value="sehat" /> Supir dalam keadaan sehat</label><br />
+          <label><input type="checkbox" name="kesiapan[]" value="tidak_terpengaruh" /> Supir tidak dalam pengaruh obat terlarang dan alkohol</label><br />
+        </td>
+      </tr>
+
+      <tr>
+        <td><label for="surat"> Surat Kerja Supir :</label></td>
+        <td>
+          <input id="surat" name="surat" type="file" accept=".pdf,.jpg,.jpeg,.png" required />
+        </td>
+      </tr>
+
+      <tr>
+        <td></td>
+        <td>
+          <button type="submit">Kirim</button>
+          <button type="reset">Reset</button>
+        </td>
+      </tr>
+    </table>
+  </form>
+</body>
+</html>
